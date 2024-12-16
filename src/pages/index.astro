@@ -13,7 +13,7 @@ const blog = (await getCollection("blog"))
   .slice(0,SITE.NUM_POSTS_ON_HOMEPAGE);
 
 // will be get data from github
-const projects = [];
+const projects: unknown[] = [];
 
 const allwork = (await getCollection("work"))
   .sort((a, b) => new Date(b.data.dateStart).valueOf() - new Date(a.data.dateStart).valueOf())
@@ -119,9 +119,9 @@ const work = await Promise.all(
           </Link>
         </div>
         <ul class="flex flex-col gap-4">
-          {projects.map(project => (
+          {projects.map(() => (
             <li>
-              <ArrowCard entry={project} />
+              {/* <ArrowCard entry={project} /> */}
             </li>
           ))}
         </ul>

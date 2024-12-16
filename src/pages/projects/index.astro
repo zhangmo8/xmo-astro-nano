@@ -1,11 +1,11 @@
 ---
 import PageLayout from "@layouts/PageLayout.astro";
 import Container from "@components/Container.astro";
-import ArrowCard from "@components/ArrowCard.astro";
+// import ArrowCard from "@components/ArrowCard.astro";
 import { PROJECTS } from "@consts";
 
 // TODO will be get data from github
-const projects = [];
+const projects: unknown[] = [];
 ---
 
 <PageLayout title={PROJECTS.TITLE} description={PROJECTS.DESCRIPTION}>
@@ -16,9 +16,9 @@ const projects = [];
       </div>
       <ul class="animate flex flex-col gap-4">
         {
-          projects.map((project) => (
+          projects.map(() => (
             <li>
-              <ArrowCard entry={project}/>
+              {/* <ArrowCard entry={project}/> */}
             </li>
           ))
         }
