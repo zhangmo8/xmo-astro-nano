@@ -1,0 +1,11 @@
+---
+import { GET as GetRepos } from "@pages/api/repos";
+export const prerender = false;
+
+const res = await GetRepos(Astro);
+const repos = await res.json();
+
+console.log("repos", repos);
+---
+
+<div>loading...</div>

@@ -6,4 +6,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   site: "https://zm8.dev",
   integrations: [mdx(), sitemap(), tailwind()],
+  output: "server",
 });
